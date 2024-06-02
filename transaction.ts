@@ -21,7 +21,7 @@ const transaction = new Transaction();
 const sendSolInstruction = SystemProgram.transfer({
   fromPubkey: senderKeyPair.publicKey,
   toPubkey,
-  lamports: LAMPORTS_PER_SOL * 1,
+  lamports: LAMPORTS_PER_SOL * 0.1,
 });
 
 transaction.add(sendSolInstruction);
