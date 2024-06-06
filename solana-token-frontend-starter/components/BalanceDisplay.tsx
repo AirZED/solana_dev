@@ -15,7 +15,7 @@ export const BalanceDisplay: FC = () => {
     }
 
     connection.getAccountInfo(publicKey).then((info) => {
-      setBalance(info.lamports);
+      setBalance(info?.lamports || 0);
     });
   }, [connection, publicKey]);
 
